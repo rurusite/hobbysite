@@ -123,6 +123,40 @@ header {
 	margin-top: 20px;
 }
 
+.loop {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: flex;
+	overflow: hidden;
+}
+
+.galary {
+	display: flex;
+		animation: loop-list 60s linear infinite;
+}
+
+.imgfx a{
+	width: calc(100vw / 2);
+	display: block;
+	margin: 5px;
+}
+
+
+
+
+@keyframes loop-list {
+	from {
+			transform: translateX(0);
+	}
+	to {
+			transform: translateX(-100%);
+	}
+}
+.imgfx:hover .galary {
+	animation-play-state: paused;
+}
+
+
 /* ---- index2 ---- */
 
 .menu-top {
@@ -211,40 +245,6 @@ header {
 		font-size: 50px;
 	}
 	
-	.loop {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		display: flex;
-		overflow: hidden;
-	}
-	
-	.galary {
-		display: flex;
-    	animation: loop-list 50s linear infinite;
-	}
-	
-	.imgfx a{
-		width: calc(100vw / 2);
-		display: block;
-		margin: 5px;
-	}
-	
-	.imgfx img {
-		width: 100%;
-	}
-	
-	
-	@keyframes loop-list {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-	.imgfx:hover .galary {
-		animation-play-state: paused;
-	}
 
 	
 	.last-txt {
@@ -262,5 +262,9 @@ header {
 		position: absolute;
 		left: 5px;
 		bottom: 20px;
+	}
+
+	.imgfx img {
+		width: 100%;
 	}
 }
