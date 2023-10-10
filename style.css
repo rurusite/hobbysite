@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+body {
+	font-family: 'Freestyle Script',sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #e3e3e3;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ehoundstooth%3C/title%3E%3Cg fill='%23fefeff' fill-opacity='0.41' fill-rule='evenodd'%3E%3Cpath d='M0 18h6l6-6v6h6l-6 6H0M24 18v6h-6M24 0l-6 6h-6l6-6M12 0v6L0 18v-6l6-6H0V0'/%3E%3C/g%3E%3C/svg%3E");
+	background-repeat: repeat;
+	height: auto;
+}
+
+li {
+	list-style: none;
+	
+}
+
+ul {
+	padding-left: 0;
+}
+
+header {
+	position: relative;
+}
+
+.scroll {
+  display: inline-block;
+  padding-top: 70px;
+  position: relative;
+}
+.scroll::before {
+  animation: scroll 3.5s infinite;
+  border: solid #000;
+  border-width: 0 0 1px 1px;
+  content: "";
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+}
+@keyframes scroll {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  80% {
+    transform: rotate(-45deg) translate(-30px, 30px);
+  }
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+.menu img {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	position: fixed;
+	z-index: 10;
+	
+	
+}
+
+.top-logo {
+	margin-top: 16px;
+	width: auto;
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.main-illust {
+	max-width: 100%;
+	height: auto;
+	opacity: 0.6;
+}
+
+.top-txt {
+	font-size: 88px;
+	line-height: 80%;
+	opacity: 0.6;
+	padding-bottom: 20px;
+	text-shadow: 3px 2px 3px #808080;
+}
+
+.galary {
+	display: flex;
+	justify-content: center;
+}
+
+.imgpc {
+	margin: 20px;
+  box-shadow: 0 0 30px gray;
+}
+.main-logo {
+	font-size: 60px;
+	opacity: 0.6;
+	text-shadow: 3px 2px 3px #808080;
+	margin: 20px 0;
+}
+
+.txt {
+	font-size: 40px;
+	opacity: 0.6;
+}
+
+.last-txt {
+	font-size: 64px;
+	line-height: 80%;
+	opacity: 0.6;
+	padding: 40px;
+	margin: 0 200px;
+	text-shadow: 3px 2px 3px #808080;
+}
+
+.footer-logo {
+	margin-top: 20px;
+}
+
+/* ---- index2 ---- */
+
+.menu-top {
+	width: auto;
+	height: 80px;
+	padding-top: 20px;
+}
+
+.acolor a{
+	color: black;
+	text-shadow: 3px 2px 3px gray;
+}
+
+.acolor li{
+	opacity: 0.7;
+	font-size: 64px;
+	margin: 10px 0 10px 0;
+}
+
+.cat {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px 0 30px 0;
+}
+
+.menu-back {
+	padding-top: 30px;
+}
+
+.cat-relative {
+	position: relative;
+}
+
+.cat-right {
+	position: absolute;
+	right: 200px;
+	bottom: 20px;
+}
+
+.cat-left {
+	position: absolute;
+	left: 200px;
+	bottom: 20px;
+}
+
+/* pc */
+
+@media(min-width:671px) {
+	.main-illust {
+		width: auto;
+		height: 400px;
+	}
+
+	.imgpc {
+	height: 300px;
+	width: 300px;
+}
+}
+
+/* スマホ */
+
+@media(max-width:670px) {
+		.menu img {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		position: fixed;
+		height: auto;
+		width: 60px;
+	}
+	
+	.top-logo {
+		margin-top: 16px;
+		width: auto;
+		height: 70px;
+	}
+	
+	.main-illust {
+		max-width: 100%;
+		height: 150px;
+		opacity: 0.6;
+	}
+	
+	.top-txt {
+		font-size: 50px;
+	}
+	
+	.loop {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		display: flex;
+		overflow: hidden;
+	}
+	
+	.galary {
+		display: flex;
+    	animation: loop-list 50s linear infinite;
+	}
+	
+	.imgfx a{
+		width: calc(100vw / 2);
+		display: block;
+		margin: 5px;
+	}
+	
+	.imgfx img {
+		width: 100%;
+	}
+	
+	
+	@keyframes loop-list {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+	.imgfx:hover .galary {
+		animation-play-state: paused;
+	}
+
+	
+	.last-txt {
+		margin: 15px;
+		font-size: 50px;
+	}
+
+	.cat-right {
+		position: absolute;
+		right: 5px;
+		bottom: 20px;
+	}
+	
+	.cat-left {
+		position: absolute;
+		left: 5px;
+		bottom: 20px;
+	}
+}
